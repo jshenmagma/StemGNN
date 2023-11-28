@@ -5,7 +5,7 @@ temp = pd.read_parquet('/data/other_data/bar_data_56_tickers.parquet.gzip')
 all_ticker = temp.index.levels[0]
 cons = 780*13
 
-for j in range(300):
+for j in range(102, 300):
     output = pd.DataFrame({all_ticker[0]:temp.xs(key=all_ticker[0], level=0).iloc[(j*780):(cons+j*780)]['close']})
     idx = 1
 
