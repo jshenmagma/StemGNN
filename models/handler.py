@@ -85,7 +85,7 @@ def validate(model, dataloader, device, normalize_method, statistic,
     if result_file:
         if not os.path.exists(result_file):
             os.makedirs(result_file)
-        step_to_print = 0
+        step_to_print = 35
         forcasting_2d = forecast[:, step_to_print, :]
         forcasting_2d_target = target[:, step_to_print, :]
 
